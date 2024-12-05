@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <title>Portfolio Website - Home</title>
+</head>
+<body>
+    <header>
+        <a href="index.html" class="logo"></a>
+        <nav>
+            <a href="index.html" class="active">Home</a>
+            <a href="services.html">Services</a>
+            <a href="skills.html">Skills</a>
+            <a href="education.html">Education</a>
+            <a href="experience.html">Experience</a>
+            <a href="contact.html">Contact</a>
+        </nav>
+    </header>
+
+    <section class="home">
+        <div class="home-img">
+            <img src="download.jpg" alt="User's Photo">
+        </div>
+        <div class="home-content">
+            <h1>Hi, Im <span>Maynard</span></h1>
+            <h3 class="typing-text">I'm a <span></span></h3>
+            <p>Greetings, my full name is Leif Maynard Borillo but you can call me Maynard for short. I am a young computer science student aspiring to be a full time game developer or website designer.</p>
+            <div class="social-icons">
+                <a href="#"><i class="fa-brands fa-facebook"></i></a>
+                <a href="#"><i class="fa-brands fa-github"></i></a>
+                <a href="#"><i class="fa-brands fa-x-twitter"></i></a>
+            </div>
+            <a href="#" class="btn">Hire me</a>
+        </div>
+    </section>
+
+    <script>
+        // JavaScript for typing effect
+        const typingText = document.querySelector(".typing-text span");
+        const roles = ["Web Developer", "Gamer", "Freelancer"];
+        let roleIndex = 0;
+        let letterIndex = 0;
+
+        function typeRole() {
+            if (letterIndex < roles[roleIndex].length) {
+                typingText.textContent += roles[roleIndex][letterIndex];
+                letterIndex++;
+                setTimeout(typeRole, 100);
+            } else {
+                setTimeout(() => {
+                    typingText.textContent = "";
+                    letterIndex = 0;
+                    roleIndex = (roleIndex + 1) % roles.length;
+                    typeRole();
+                }, 2000);
+            }
+        }
+        typeRole();
+    </script>
+</body>
+</html>

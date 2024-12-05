@@ -1,0 +1,859 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    border: none;
+    outline: none;
+    font-family: 'Poppins', sans-serif;
+}
+html{
+    font-size: 62.5%;
+}
+body{
+    width: 100%;
+    height: 100vh;
+    overflow-x: hidden;
+    background-color: black;
+    color: white;
+}
+header{
+    margin-top: 20px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 1rem 9%;
+    background-color: transparent;
+    filter: drop-shadow(10px);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+}
+.logo{
+    font-size: 3rem;
+    color: #fc27c0;
+    font-weight: 800;
+    cursor: pointer;
+    transition: 0.5s ease;
+}
+.logo:hover{
+    transform: scale(1.1);
+}
+nav a{
+    font-size: 1.8rem;
+    color: white;
+    margin-left: 4rem;
+    font-weight: 500;
+    transition: 0.3s ease;
+    border-bottom: 3px solid transparent;
+}
+nav a:hover,
+nav a.active{
+    color: #ff00f2;
+    border-bottom: 3px solid #f700e3;
+}
+@media(max-width:995px){
+    nav{
+        position: absolute;
+        display: none;
+        top: 0;
+        right: 0;
+        width: 40%;
+        border-left: 3px solid #fc27e3;
+        border-bottom: 3px solid #fcbc27;
+        border-bottom-left-radius: 2rem;
+        padding: 1rem solid;
+        background-color: #161616;
+        border-top: 0.1rem solid rgba(0,0,0,0.1);
+    }
+    nav.active{
+        display: block;
+    }
+    nav a{
+        display: block;
+        font-size: 2rem;
+        margin: 3rem 0;
+    }
+    nav a:hover,
+    nav a.active{
+        padding: 1rem;
+        border-radius: 0.5rem;
+        border-bottom: 0.5rem solid #fcbc27;
+    }
+}
+section{
+    min-height: 100vh;
+    padding: 5rem 9% 5rem;
+}
+.home{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8rem;
+    background-color: black;
+}
+.home .home-content h1{
+    font-size: 6rem;
+    font-weight: 700;
+    line-height: 1.3;
+}
+span{
+    color: #fcbc27;
+}
+.home-content h3{
+    font-size: 4rem;
+    margin-bottom: 1rem;
+    font-weight: 700;
+}
+.home-content p{
+    font-size: 1.6rem;
+}
+.home-img{
+    border-radius: 50%;
+}
+.home-img img{
+    position: relative;
+    width: 32vw;
+    border-radius: 50%;
+    box-shadow: 0 0 25px solid #fcbc27;
+    cursor: pointer;
+    transition: 0.2s linear;
+}
+.home-img img:hover{
+    font-size: 1.8rem;
+    font-weight: 500;
+}
+.social-icons a{
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 4rem;
+    height: 4rem;
+    background-color: transparent;
+    border: 0.2rem solid #27fce0;
+    font-size: 2rem;
+    border-radius: 50%;
+    margin: 3rem 1.5rem 3rem 0;
+    transition: 0.3s ease;
+    color: #fc27f8;
+}
+.social-icons a:hover{
+    color: black;
+    transform: scale(1.3) translateY(-5px);
+    background-color: #fcbc27;
+    box-shadow: 0  0 25px #fcbc27;
+}
+.btn{
+    display: inline-block;
+    padding: 1rem 2.8rem;
+    background-color: black;
+    border-radius: 4rem;
+    font-size: 1.6rem;
+    color: #fcbc27;
+    letter-spacing: 0.3rem;
+    font-weight: 600;
+    border: 2px solid #fcbc27;
+    transition: 0.3s ease;
+    cursor: pointer;
+}
+.btn:hover{
+    transform: scale3d(1.03);
+    background-color: #fcbc27;
+    color: black;
+    box-shadow: 0 0 25px #fcbc27;
+}
+.typing-text{
+    font-size: 34px;
+    font-weight: 600;
+    min-width: 280px;
+}
+.typing-text span{
+    position: relative;
+}
+.typing-text span::before{
+    content: "software Developer";
+    color: #fcbc27;
+    animation: words 20s infinite;
+}
+.typing-text span::after{
+    content: "";
+    background-color: black;
+    position: absolute;
+    width: calc(100% + 8px);
+    height: 100%;
+    border-left: 3px solid black;
+    right: -8;
+    animation: cursor 0.6s infinite;
+}
+@keyframes cursor{
+    to{
+        border-left: 3px solid #fcbc27;
+    }
+}
+@keyframes words{
+    0%, 20%{
+        content: "";
+    }
+    21%, 40%{
+        content: "";
+    }
+    41%, 60%{
+        content: "";
+    }
+    61%, 80%{
+        content: "";
+    }
+    81%, 100%{
+        content: "";
+    }
+}
+@media (max-width: 1000px){
+    .home{
+        gap: 4rem;
+    }
+}
+@media(max-width:995px){
+    .home{
+        flex-direction: column;
+        margin: 5rem 4rem;
+    }
+    .home .home-content h3{
+        font-size: 2.5rem;
+    }
+    .home-content h1{
+        font-size: 5rem;
+    }
+    .home-img img{
+        width: 70vw;
+        margin-top: 4rem;
+    }
+}
+.education {
+    padding-top: 10rem;  /* Adds space at the top to lower the text */
+    font-size: 1.8rem;   /* Increases the font size for the content */
+}
+
+.education h2 {
+    font-size: 3.5rem;   /* Increases the font size for the main heading */
+    text-align: center;
+    margin-bottom: 4rem;  /* Adds spacing between the heading and the list of education items */
+}
+
+.education-list {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;  /* Adds spacing between each education item */
+    align-items: center;  /* Centers the items horizontally */
+}
+
+.education-item {
+    background-color: #222;  /* Optional: Adds a dark background to each item for contrast */
+    padding: 2rem;
+    border-radius: 1rem;
+    width: 70%;  /* Optional: Adjusts the width of each education item */
+    text-align: center;  /* Centers the content inside the item */
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);  /* Optional: Adds a subtle shadow for better visibility */
+}
+
+.education-item h3 {
+    font-size: 2.2rem;  /* Increases the font size for the degree or title */
+    margin-bottom: 1rem;
+}
+
+.education-item p {
+    font-size: 1.8rem;  /* Increases the font size for the description */
+}
+.experience {
+    padding-top: 10rem;  /* Adds space at the top to lower the text */
+    font-size: 1.8rem;   /* Increases the font size for the content */
+}
+
+.experience h2 {
+    font-size: 3.5rem;   /* Increases the font size for the main heading */
+    text-align: center;
+    margin-bottom: 4rem;  /* Adds spacing between the heading and the list of experience items */
+    color: #fcbc27;       /* Adds color to the heading for better visibility */
+}
+
+.experience-list {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;  /* Adds spacing between each experience item */
+    align-items: center;  /* Centers the items horizontally */
+}
+
+.experience-item {
+    position: relative;
+    background: linear-gradient(45deg, #333, #222);  /* Gradient background for a sleek effect */
+    padding: 2.5rem;
+    border-radius: 1.5rem;
+    width: 80%;  /* Adjusts the width of each experience item */
+    text-align: center;  /* Centers the content inside the item */
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.4);  /* Shadow for depth */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;  /* Hover transition */
+}
+
+.experience-item:hover {
+    transform: translateY(-5px);  /* Moves the item up slightly on hover */
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.6);  /* Intensifies shadow on hover */
+}
+
+.experience-item h3 {
+    font-size: 2.5rem;  /* Increased size for the job title */
+    margin-bottom: 1.5rem;
+    color: #fcbc27;  /* Color for job titles */
+}
+
+.experience-item p {
+    font-size: 1.8rem;  /* Increases the font size for the description */
+    color: #ccc;       /* Lighter color for the description */
+}
+
+.experience-item .job-icon {
+    position: absolute;
+    top: -2rem;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 3rem;  /* Icon size */
+    color: #fcbc27;   /* Icon color */
+}
+
+@media (max-width: 1000px) {
+    .experience-list {
+        flex-direction: column;  /* Stack items vertically on smaller screens */
+        gap: 2rem;
+    }
+
+    .experience-item {
+        width: 90%;  /* Makes the item width smaller on mobile */
+    }
+
+    .experience-item h3 {
+        font-size: 2.2rem;  /* Reduces job title size on smaller screens */
+    }
+
+    .experience-item p {
+        font-size: 1.6rem;  /* Adjusts text size for smaller screens */
+    }
+}
+.skills {
+    padding-top: 10rem;  /* Adds space at the top */
+    font-size: 1.8rem;   /* Increases font size for better readability */
+    text-align: center;
+}
+
+.skills h2 {
+    font-size: 3.5rem;  /* Increases heading size */
+    color: #fcbc27;      /* Adds color to the heading */
+    margin-bottom: 4rem;
+}
+
+.skills-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));  /* Responsive grid layout */
+    gap: 3rem;  /* Adds space between the items */
+}
+
+.skill-item {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 2rem;  /* Adds space between icon and text */
+    padding: 2.5rem;
+    border-radius: 1.5rem;
+    background: linear-gradient(135deg, #91680a, #000000); /* Gradient background */
+    color: white;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border: 2px solid transparent;
+    position: relative;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+}
+
+.skill-item:hover {
+    transform: translateY(-5px);   /* Slight hover effect */
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.4);   /* Soft shadow effect on hover */
+    border-color: #fcbc27;
+}
+
+.skill-icon {
+    font-size: 4rem;
+    color: #fcbc27;   /* Icon color */
+}
+
+.skill-text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.skill-item h3 {
+    font-size: 2.2rem;   /* Adjusts size of skill name */
+    margin-bottom: 1rem;
+    color: #fcbc27;
+}
+
+.skill-item p {
+    font-size: 1.6rem;   /* Description font size */
+    color: #ccc;         /* Lighter text for description */
+}
+
+/* Responsive Styles */
+@media (max-width: 1000px) {
+    .skills-list {
+        grid-template-columns: 1fr 1fr;  /* Stacks items in two columns for medium screens */
+    }
+}
+
+@media (max-width: 750px) {
+    .skills-list {
+        grid-template-columns: 1fr;  /* Stacks items in one column for small screens */
+    }
+}
+.services {
+    padding-top: 10rem;  /* Adds space at the top */
+    text-align: center;
+    font-size: 1.8rem;  /* Increases font size for readability */
+}
+
+.services h2 {
+    font-size: 3.5rem;  /* Increases heading size */
+    color: #fcbc27;     /* Adds color to the heading */
+    margin-bottom: 5rem;  /* Adds more space below the heading */
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.services-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));  /* Creates a responsive grid */
+    gap: 3rem;  /* Adds space between items */
+}
+
+.service-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;  /* Adds space between icon and text */
+    padding: 3rem;
+    border-radius: 1.5rem;
+    background: #000000;  /* Black background for the box */
+    background: linear-gradient(135deg, rgba(0, 0, 0, 0.9), rgba(110, 12, 12, 0.8)); /* Gradient overlay */
+    color: white;
+    transition: transform 0.3s ease, box-shadow 0.3s ease, border 0.3s ease;
+    border: 3px solid transparent;  /* Transparent border to start */
+    position: relative;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+}
+
+.service-item:hover {
+    transform: translateY(-5px);  /* Slight lift effect on hover */
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.4);  /* Soft shadow effect */
+    border-color: #fcbc27;  /* Yellow border on hover */
+}
+
+.service-icon {
+    font-size: 4rem;
+    color: #fcbc27;  /* Icon color */
+}
+
+.service-text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+}
+
+.service-item h3 {
+    font-size: 2.2rem;  /* Increases size of service name */
+    margin-bottom: 1rem;
+    color: #fcbc27;  /* Yellow color for headings */
+    font-weight: bold;
+}
+
+.service-item p {
+    font-size: 1.6rem;  /* Description font size */
+    color: #cccccc;  /* Lighter color for the description */
+}
+
+/* Responsive Layout */
+@media (max-width: 1000px) {
+    .services-list {
+        grid-template-columns: 1fr 1fr;  /* Stacks items in two columns for medium screens */
+    }
+}
+
+@media (max-width: 750px) {
+    .services-list {
+        grid-template-columns: 1fr;  /* Stacks items in one column for small screens */
+    }
+}
+
+/* General Styles for Contact Page */
+.contact-section {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: #111;
+    padding: 5rem 0; /* Increased padding to move content downward */
+    color: white;
+}
+
+.contact-title {
+    font-size: 2.8rem; /* Reduced size */
+    color: #f9e200; /* Neon Yellow */
+    margin-bottom: 2rem;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.contact-subtitle {
+    font-size: 1.6rem; /* Reduced size */
+    color: #ffffff;
+    margin-bottom: 2rem;
+    text-align: center;
+    max-width: 600px;
+}
+
+.contact-form {
+    width: 85%;
+    max-width: 600px; /* Reduced form width */
+    background: #222;
+    padding: 2rem;
+    border-radius: 1rem;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.contact-form:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 25px rgba(0, 0, 0, 0.5);
+}
+
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    padding: 1.2rem; /* Reduced padding */
+    margin-bottom: 1.5rem; /* Reduced margin */
+    border-radius: 0.8rem; /* Reduced border radius */
+    border: 2px solid transparent;
+    background: #111;
+    color: #fff;
+    font-size: 1.4rem; /* Smaller font size */
+    transition: border 0.3s ease, box-shadow 0.3s ease;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+    border: 2px solid #f9e200; /* Neon Yellow */
+    box-shadow: 0 0 10px #f9e200; /* Neon Yellow */
+    outline: none;
+}
+
+.contact-form textarea {
+    height: 150px; /* Reduced textarea height */
+    resize: none;
+    line-height: 1.4;
+}
+
+.contact-form button {
+    width: 100%;
+    padding: 1.2rem;
+    background: linear-gradient(45deg, #ff0080, #00ffff); /* Neon Pink to Neon Cyan */
+    border: none;
+    border-radius: 0.8rem; /* Reduced border radius */
+    font-size: 1.6rem; /* Smaller font size */
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.3s ease;
+}
+
+.contact-form button:hover {
+    background: linear-gradient(45deg, #00ffff, #ff0080); /* Neon Cyan to Neon Pink */
+    transform: translateY(-5px);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+}
+
+/* Input Field with Neon Icons */
+.input-icon {
+    position: absolute;
+    top: 50%;
+    left: 15px;
+    transform: translateY(-50%);
+    font-size: 1.6rem; /* Smaller icon size */
+    color: #f9e200; /* Neon Yellow */
+}
+
+/* Contact Section Image (if present) */
+.contact-img {
+    width: 100%;
+    max-width: 400px; /* Reduced image size */
+    border-radius: 1rem;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+    margin-top: 2rem;
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 768px) {
+    .contact-title {
+        font-size: 2.5rem; /* Smaller title on smaller screens */
+    }
+
+    .contact-subtitle {
+        font-size: 1.4rem; /* Reduced subtitle font */
+    }
+
+    .contact-form {
+        width: 90%;
+        padding: 1.8rem; /* Reduced padding */
+    }
+
+    .contact-form input,
+    .contact-form textarea {
+        font-size: 1.4rem; /* Smaller font size for inputs */
+    }
+
+    .contact-form button {
+        font-size: 1.5rem; /* Smaller button font */
+    }
+
+    .contact-img {
+        width: 80%;
+        margin-top: 2rem;
+    }
+}
+
+@media (max-width: 500px) {
+    .contact-title {
+        font-size: 2.2rem; /* Even smaller title */
+    }
+
+    .contact-form {
+        width: 100%;
+        padding: 1.5rem; /* Further reduced padding */
+    }
+
+    .contact-form input,
+    .contact-form textarea {
+        font-size: 1.4rem; /* Smaller font size for inputs */
+    }
+
+    .contact-form button {
+        font-size: 1.5rem; /* Smaller button font */
+    }
+
+    .contact-img {
+        width: 100%;
+        margin-top: 2rem;
+    }
+}
+/* Education Section */
+.education {
+    padding-top: 10rem;  /* Adds space at the top to lower the text */
+    font-size: 1.8rem;   /* Increases the font size for the content */
+    background-color: #000000;  /* Solid black background */
+    padding-bottom: 5rem; /* Adds space at the bottom */
+}
+
+.education h2 {
+    font-size: 3.8rem;   /* Increases the font size for the main heading */
+    text-align: center;
+    margin-bottom: 4rem;  /* Adds spacing between the heading and the list of education items */
+    color: #f9e200;       /* Neon Yellow color */
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-weight: bold;
+}
+
+.education-list {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;  /* Adds spacing between each education item */
+    align-items: center;  /* Centers the items horizontally */
+}
+
+.education-item {
+    background: linear-gradient(135deg, #222222, #111111);  /* Darker gradient background */
+    padding: 2.5rem;
+    border-radius: 1rem;
+    width: 70%;  /* Optional: Adjusts the width of each education item */
+    text-align: center;  /* Centers the content inside the item */
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);  /* Optional: Adds a subtle shadow for better visibility */
+    border: 2px solid transparent;
+    transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+}
+
+.education-item:hover {
+    transform: translateY(-5px);  /* Slight hover effect */
+    box-shadow: 0 4px 25px rgba(0, 0, 0, 0.5);  /* Shadow effect on hover */
+    border-color: #f9e200;  /* Neon Yellow border on hover */
+}
+
+.education-item h3 {
+    font-size: 2.5rem;   /* Increases the font size for the degree or title */
+    margin-bottom: 1.5rem;
+    color: #f9e200;      /* Neon Yellow */
+}
+
+.education-item p {
+    font-size: 1.8rem;  /* Increases the font size for the description */
+    color: #ccc;        /* Light grey color for the description */
+}
+
+/* Icon for the education items */
+.education-item .education-icon {
+    font-size: 4rem;  /* Larger icon size */
+    color: #f9e200;   /* Neon Yellow */
+    margin-bottom: 1.5rem;
+}
+
+/* Responsive Styles for Education Page */
+@media (max-width: 768px) {
+    .education h2 {
+        font-size: 3.2rem; /* Smaller title font size */
+    }
+
+    .education-item {
+        width: 80%;  /* Adjust item width for smaller screens */
+    }
+
+    .education-item h3 {
+        font-size: 2.2rem;  /* Smaller title font size for smaller screens */
+    }
+
+    .education-item p {
+        font-size: 1.6rem;  /* Smaller description text */
+    }
+
+    .education-item .education-icon {
+        font-size: 3.5rem;  /* Smaller icon size */
+    }
+}
+
+@media (max-width: 480px) {
+    .education h2 {
+        font-size: 2.8rem; /* Even smaller title font size */
+    }
+
+    .education-item {
+        width: 90%;  /* Adjust item width for very small screens */
+        padding: 1.8rem; /* Reduced padding */
+    }
+
+    .education-item h3 {
+        font-size: 2rem;  /* Even smaller title */
+    }
+
+    .education-item p {
+        font-size: 1.4rem;  /* Even smaller description */
+    }
+
+    .education-item .education-icon {
+        font-size: 3rem;  /* Further reduce icon size */
+    }
+}
+/* Services Section */
+.services {
+    padding-top: 8rem;  /* Adjusted top padding */
+    font-size: 1.6rem;  /* Reduced font size for better compactness */
+    background-color: #000000;  /* Black background */
+    padding-bottom: 5rem; /* Adds space at the bottom */
+}
+
+.services h2 {
+    font-size: 3.2rem;  /* Smaller font size for the main heading */
+    color: #f9e200;     /* Neon Yellow */
+    margin-bottom: 3rem; /* Adds spacing below the heading */
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-weight: bold;
+    text-align: center;
+}
+
+.services-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));  /* Makes the grid items smaller */
+    gap: 2.5rem;  /* Reduced gap between items */
+}
+
+.service-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1.5rem;  /* Reduced gap between icon and text */
+    padding: 2rem;  /* Reduced padding to make the boxes smaller */
+    border-radius: 1.5rem;
+    background: linear-gradient(135deg, rgba(192, 0, 166, 0.9), rgba(0, 240, 212, 0.8)); /* Gradient background */
+    color: white;
+    transition: transform 0.3s ease, box-shadow 0.3s ease, border 0.3s ease;
+    border: 3px solid transparent;
+    position: relative;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+}
+
+.service-item:hover {
+    transform: translateY(-5px);  /* Slight hover effect */
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.4);  /* Soft shadow effect */
+    border-color: #f9e200;  /* Neon Yellow border on hover */
+}
+
+.service-icon {
+    font-size: 3.5rem;  /* Reduced icon size */
+    color: #f9e200;  /* Neon Yellow */
+}
+
+.service-text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+}
+
+.service-item h3 {
+    font-size: 2rem;  /* Smaller service title font size */
+    margin-bottom: 1rem;
+    color: #f9e200;  /* Neon Yellow */
+    font-weight: bold;
+}
+
+.service-item p {
+    font-size: 1.4rem;  /* Smaller description font size */
+    color: #cccccc;  /* Lighter color for the description */
+}
+
+/* Responsive Layout */
+@media (max-width: 1000px) {
+    .services-list {
+        grid-template-columns: 1fr 1fr;  /* Stacks items in two columns for medium screens */
+    }
+}
+
+@media (max-width: 750px) {
+    .services-list {
+        grid-template-columns: 1fr;  /* Stacks items in one column for small screens */
+    }
+
+    .service-item {
+        padding: 1.5rem;  /* Reduced padding for smaller screens */
+    }
+
+    .service-item h3 {
+        font-size: 1.8rem;  /* Smaller title font size on small screens */
+    }
+
+    .service-item p {
+        font-size: 1.2rem;  /* Smaller description text */
+    }
+
+    .service-icon {
+        font-size: 3rem;  /* Smaller icon size on small screens */
+    }
+}
